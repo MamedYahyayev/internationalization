@@ -20,3 +20,4 @@ public class InternationalizationApplication extends SpringBootServletInitialize
 	}
 	
 }
+

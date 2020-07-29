@@ -1,8 +1,6 @@
 package az.maqa.internationalization.dto;
 
 import az.maqa.internationalization.entity.Memory;
-import az.maqa.internationalization.entity.NotebookLangAz;
-import az.maqa.internationalization.entity.NotebookLangEng;
 import az.maqa.internationalization.entity.Processor;
 import az.maqa.internationalization.entity.Screen;
 

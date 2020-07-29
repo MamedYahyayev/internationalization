@@ -15,10 +15,10 @@ import az.maqa.internationalization.utils.EngDescriptionLanguage;
 public class NotebookServiceImpl implements NotebookService {
 
 	@Autowired
-	private AzDescriptionLanguage langAz;
+	private AzDescriptionLanguage descriptionLangAz;
 
 	@Autowired
-	private EngDescriptionLanguage langEn;
+	private EngDescriptionLanguage descriptionLangEn;
 
 	@Override
 	public List<NotebookDTO> getAllNotebooks(String lang) {
@@ -32,13 +32,13 @@ public class NotebookServiceImpl implements NotebookService {
 	private List<NotebookDTO> choosingDescriptionLang(String lang, List<NotebookDTO> returnValue) {
 		switch (lang) {
 		case "az":
-			returnValue = langAz.chooseDescriptionLang(lang);
+			returnValue = descriptionLangAz.chooseDescriptionLang(lang);
 			break;
 		case "en":
-			returnValue = langEn.chooseDescriptionLang(lang);
+			returnValue = descriptionLangEn.chooseDescriptionLang(lang);
 			break;
 		default:
-			returnValue = langAz.chooseDescriptionLang(lang);
+			returnValue = descriptionLangAz.chooseDescriptionLang(lang);
 			break;
 		}
 		return returnValue;
